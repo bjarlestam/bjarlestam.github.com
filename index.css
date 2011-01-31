@@ -1,0 +1,53 @@
+body {
+  color: #AAA;
+  font-family: "Arial";
+
+}
+
+#main {
+  padding: 20px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#DDDDDD), to(#FFFFFF));
+	background: -moz-linear-gradient(top,  #DDDDDD,  #FFFFFF);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDDDDD', endColorstr='#FFFFFF');
+  
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  
+}
+
+#about, #links {
+  padding: 40px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  
+	
+	width: 300px;
+	border: 1px solid #DDD;
+	opacity: 0.7;
+}
+
+#about {
+  background: #8DB2D6;
+  z-index: 100;
+  color: #888;
+}
+
+#links {
+  background: #FFF;
+  z-index: 200;
+  position: relative;
+  top: -30px;
+  left: 50px;
+}
+
+#links a {
+  display: block;
+  color: #888;
+}
+
+#links a:hover {
+  display: block;
+  color: #555;
+}
