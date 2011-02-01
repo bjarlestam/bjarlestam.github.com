@@ -24,10 +24,12 @@
       -moz-border-radius: 8px;
       -webkit-border-radius: 8px;
       border-radius: 8px;
-
+      position: absolute;
+      left: 20%;
+      width: 500px;
     }
 
-    #about, #links {
+    .box {
       padding: 40px;
       -moz-border-radius: 8px;
       -webkit-border-radius: 8px;
@@ -35,22 +37,32 @@
 
 
     	width: 300px;
-    	border: 1px solid #DDD;
+    	border: 2px solid #FFCA80;
     	opacity: 0.7;
     }
 
+    #box1 {
+      background: #EEEEEE;
+      z-index: 50;
+      height: 30px;
+    }
+
     #about {
-      background: #8DB2D6;
+      background: #FFA01C;
       z-index: 100;
-      color: #888;
+      color: #fff;
+      position: relative;
+      top: -30px;
+      left: 40px;
+      height: 60px;
     }
 
     #links {
       background: #FFF;
       z-index: 200;
       position: relative;
-      top: -30px;
-      left: 50px;
+      top: -60px;
+      left: 115px;
     }
 
     #links a {
@@ -69,11 +81,12 @@
 <body>
   <div id="main">
   <h1>Andreas Bjärlestam</h1>
-  <div id="about">
+  <div id="box1" class="box"></div>
+  <div id="about" class="box">
     Software developer
   </div>
   
-  <div id="links">
+  <div id="links" class="box">
     <a href="http://andreas.bjarlestam.com">andreas.bjarlestam.com</a>
     <a href="http://www.linkedin.com/in/bjarlestam">linkedin</a>
     <a href="http://www.twitter.com/bjarlestam">twitter</a>
