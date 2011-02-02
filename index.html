@@ -39,30 +39,58 @@
     	width: 300px;
     	border: 2px solid #FFCA80;
     	opacity: 0.7;
+    	position: absolute;
     }
 
     #box1 {
       background: #EEEEEE;
       z-index: 50;
       height: 30px;
+      top: 120px;
+      left: 20px;
     }
+    
+    #box2 {
+      z-index: 120;
+      width: 30px;
+      height: 30px;
+      top: 150px;
+      left: 350px;
+    }
+
+    #box3 {
+      z-index: 70;
+      width: 10px;
+      height: 10px;
+      top: 375px;
+      left: 80px;
+      opacity: 0;
+    }
+
+    #box4 {
+      height: 70px;
+      left: 300px;
+      top: 390px;
+      width: 40px;
+      z-index: 250;
+      opacity: 0;
+    }
+
 
     #about {
       background: #FFA01C;
       z-index: 100;
       color: #fff;
-      position: relative;
-      top: -30px;
-      left: 40px;
       height: 60px;
+      top: 170px;
+      left: 50px;
     }
 
     #links {
       background: #FFF;
       z-index: 200;
-      position: relative;
-      top: -60px;
-      left: 115px;
+      top: 270px;
+      left: 120px;
     }
 
     #links a {
@@ -91,5 +119,38 @@
     <a href="http://www.linkedin.com/in/bjarlestam">linkedin</a>
     <a href="http://www.twitter.com/bjarlestam">twitter</a>
   </div>
+
+  <div id="box2" class="box decoration"></div>
+  <div id="box3" class="box decoration"></div>
+  <div id="box4" class="box decoration"></div>
+
   </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      
+      animateOpacity('#about', 3000, 1500, 0.2, 1.0);
+      animateOpacity('#links', 4000, 2000, 0.1, 1.0);
+      animateOpacity('#box1', 2500, 1200, 0.1, 0.8);
+      animateOpacity('.decoration', 4500, 2200, 0.0, 0.7);
+      
+
+      
+      function animateOpacity(selector, interval, length, from, to) {
+        from = from || 0.1
+        to = to || 1.0
+        setInterval(function() {
+          $(selector).animate({opacity: getRandom(from, to)}, length);
+        }, interval);
+        
+        $(selector).animate({opacity: getRandom(from, to)}, length);
+      }
+      
+      function getRandom(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+      
+    });
+    
+  </script>
 </body>
