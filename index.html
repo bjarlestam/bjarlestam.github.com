@@ -77,6 +77,36 @@
     }
 
 
+    #box5 {
+      z-index: 140;
+      width: 0px;
+      height: 0px;
+      top: 180px;
+      left: 330px;
+      background: #FFF;
+    }
+
+    #box6 {
+      z-index: 70;
+      width: 0px;
+      height: 0px;
+      top: 430px;
+      left: 140px;
+      opacity: 0;
+      background: #FFCA80;
+    }
+
+    #box7 {
+      width: 0px;
+      height: 0px;
+      left: 70px;
+      top: 260px;
+      z-index: 250;
+      opacity: 0;
+    }
+
+
+
     #about {
       background: #FFA01C;
       z-index: 100;
@@ -120,9 +150,14 @@
     <a href="http://www.twitter.com/bjarlestam">twitter</a>
   </div>
 
-  <div id="box2" class="box decoration"></div>
-  <div id="box3" class="box decoration"></div>
-  <div id="box4" class="box decoration"></div>
+  <div id="box2" class="box decoration1"></div>
+  <div id="box3" class="box decoration1"></div>
+  <div id="box4" class="box decoration1"></div>
+  
+  <div id="box5" class="box decoration2"></div>
+  <div id="box6" class="box decoration2"></div>
+  <div id="box7" class="box decoration2"></div>
+  
 
   </div>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>
@@ -132,7 +167,8 @@
       animateOpacity('#about', 3000, 1500, 0.2, 1.0);
       animateOpacity('#links', 4000, 2000, 0.1, 1.0);
       animateOpacity('#box1', 2500, 1200, 0.1, 0.8);
-      animateOpacity('.decoration', 4500, 2200, 0.0, 0.7);
+      animateOpacity('.decoration1', 4500, 2200, 0.0, 0.7);
+      animateOpacity('.decoration2', 2000, 1000, 0.0, 0.7);
       
 
       
