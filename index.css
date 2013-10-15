@@ -1,0 +1,55 @@
+body {
+  color: #AAA;
+  font-family: "Arial";
+  font-size: 30px;
+  }
+
+#main {
+    padding: 20px;
+    padding-bottom: 80px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#DDDDDD), to(#F3F3F3));
+    background: -moz-linear-gradient(top,  #DDDDDD,  #F3F3F3);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDDDDD', endColorstr='#F3F3F3');
+
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 80%;
+    min-width: 500px;
+    position: relative;
+}
+
+.bubble {
+  display: none;
+  border: 2px solid #FFCA80;
+  background: rgba(255, 178, 36, 0.9);
+  position: absolute;
+}
+
+#about {
+  background: #FFA01C;
+  color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  border: 2px solid #FFCA80;
+  opacity: 0.8;
+  width: 400px;
+}
+
+#links {
+  background: #FFF;
+  z-index: 200;
+  top: -90px;
+  left: 120px;
+}
+
+#about a {
+  margin-bottom: 15px;
+  display: block;
+  color: #888;
+}
+
+#about a:hover {
+  color: #555;
+}

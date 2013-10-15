@@ -3,181 +3,52 @@
 <html>
 <head>
   <title>Andreas Bjärlestam</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="keywords" content="bjarlestam code javascript ruby java" />
-    <meta name="description" content="Andreas Bjärlestam" />
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css">
-    
-    <style>
-    body {
-      color: #AAA;
-      font-family: "Arial";
-      font-size: 30px;
-    }
-
-    #main {
-      padding: 20px;
-    	background: -webkit-gradient(linear, left top, left bottom, from(#DDDDDD), to(#FFFFFF));
-    	background: -moz-linear-gradient(top,  #DDDDDD,  #FFFFFF);
-    	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDDDDD', endColorstr='#FFFFFF');
-
-      -moz-border-radius: 8px;
-      -webkit-border-radius: 8px;
-      border-radius: 8px;
-      margin: 0 auto;
-      width: 80%;
-      min-width: 500px;
-    }
-
-    .box {
-      padding: 40px;
-      -moz-border-radius: 8px;
-      -webkit-border-radius: 8px;
-      border-radius: 8px;
-
-    	width: 50%;
-    	border: 2px solid #FFCA80;
-    	opacity: 0.7;
-    	position: relative;
-    	width: 400px;
-    }
-
-    #box1 {
-      background: #EEEEEE;
-      z-index: 50;
-      height: 30px;
-      top: 20px;
-      left: 20px;
-    }
-    
-    #box2 {
-      z-index: 120;
-      width: 30px;
-      height: 30px;
-      top: -360px;
-      left: 460px;
-    }
-
-    #box3 {
-      z-index: 70;
-      width: 10px;
-      height: 10px;
-      top: -430px;
-      left: 40px;
-      opacity: 0;
-    }
-
-    #box4 {
-      height: 70px;
-      left: 300px;
-      top: -330px;
-      width: 40px;
-      z-index: 250;
-      opacity: 0;
-    }
-
-    #box5 {
-      z-index: 140;
-      width: 0px;
-      height: 0px;
-      top: -780px;
-      left: 410px;
-      background: #FFF;
-    }
-
-    #box6 {
-      z-index: 70;
-      width: 0px;
-      height: 0px;
-      top: -560px;
-      left: 360px;
-      opacity: 0;
-      background: #FFCA80;
-    }
-
-    #box7 {
-      width: 0px;
-      height: 0px;
-      left: 90px;
-      top: -640px;
-      z-index: 250;
-      opacity: 0;
-    }
-
-    #about {
-      background: #FFA01C;
-      z-index: 100;
-      color: #fff;
-      height: 60px;
-      top: -50px;
-      left: 50px;
-    }
-
-    #links {
-      background: #FFF;
-      z-index: 200;
-      top: -90px;
-      left: 120px;
-    }
-
-    #links a {
-      margin-bottom: 15px;
-      display: block;
-      color: #888;
-    }
-
-    #links a:hover {
-      display: block;
-      color: #555;
-    }
-    
-    
-    </style>
+    <meta charset="utf-8">
+    <meta name="keywords" content="bjarlestam code javascript ruby java python programmer developer bitbender" />
+    <meta name="description" content="Andreas Bjärlestam | bitbender" />
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
   <div id="main">
-  <h1>Andreas Bjärlestam</h1>
-  <div id="box1" class="box"></div>
-  <div id="about" class="box">
-    Software developer
+    <h1>Andreas Bjärlestam</h1>
+    <div id="about">
+      <p>bitbender</p>
+      <a href="http://andreas.bjarlestam.com">andreas.bjarlestam.com</a>
+      <a href="http://www.linkedin.com/in/bjarlestam">linkedin</a>
+      <a href="http://www.twitter.com/bjarlestam">twitter</a>
+    </div>
   </div>
-  
-  <div id="links" class="box">
-    <a href="http://andreas.bjarlestam.com">andreas.bjarlestam.com</a>
-    <a href="http://www.linkedin.com/in/bjarlestam">linkedin</a>
-    <a href="http://www.twitter.com/bjarlestam">twitter</a>
-  </div>
-
-  <div id="box2" class="box decoration1"></div>
-  <div id="box3" class="box decoration1"></div>
-  <div id="box4" class="box decoration1"></div>
-  
-  <div id="box5" class="box decoration2"></div>
-  <div id="box6" class="box decoration2"></div>
-  <div id="box7" class="box decoration2"></div>
-  
-
-  </div>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
   <script type="text/javascript">
+
     $(document).ready(function() {
       
-      animateOpacity('#about', 3000, 1500, 0.2, 1.0);
-      animateOpacity('#links', 4000, 2000, 0.1, 1.0);
-      animateOpacity('#box1', 2500, 1200, 0.1, 0.8);
-      animateOpacity('.decoration1', 4500, 2200, 0.0, 0.7);
-      animateOpacity('.decoration2', 2000, 1000, 0.0, 0.7);
+      var bubbles = 40;
+      for(var i=1; i<bubbles+1; i++) {      
+        setTimeout(createBubble, i*100 + getRandom(0, 100));
+      }
       
-
+      var topStart = 100;
       
-      function animateOpacity(selector, interval, length, from, to) {
-        from = from || 0.1
-        to = to || 1.0
-        setInterval(function() {
-          $(selector).animate({opacity: getRandom(from, to)}, length);
-        }, interval);
+      function createBubble() {
+        var bubble = $('<div class="bubble"></div>');
+        var size = getRandom(10, 100);
+        var top = topStart + getRandom(5, 20);
+        topStart = top;
+        var left = getRandom(400, 600);
+        var opacity = getRandom(0.1, 0.9);
+        var background = "rgba(255, 178, 36, " + opacity + ")"
         
-        $(selector).animate({opacity: getRandom(from, to)}, length);
+        bubble.css({
+          top: top,
+          left: left,
+          width: size,
+          height: size,
+          'border-radius': size/2,
+          background: background
+          });
+        $('#main').append(bubble);
+        bubble.fadeIn('slow');
       }
       
       function getRandom(min, max) {
@@ -188,3 +59,4 @@
     
   </script>
 </body>
+</html>
