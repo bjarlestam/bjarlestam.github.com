@@ -2,7 +2,7 @@ body {
   color: #DDD;
   font-family: "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 30px;
+  font-size: 2rem;
   }
 
 h1 {
@@ -11,7 +11,7 @@ h1 {
 
 h2 {
   margin-top: 0;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 200;
 }
 
@@ -42,8 +42,20 @@ h2 {
   margin-bottom: 15px;
   display: block;
   color: #DDD;
+  text-decoration: none;
+}
+
+#about a:before {
+  content: "☞";
+  padding-right: 1rem;
+  color: rgb(254, 107, 222)
 }
 
 #about a:hover {
   color: #555;
 }
+
+#about a:hover:before {
+  color: rgb(12, 205, 172)
+}
+
