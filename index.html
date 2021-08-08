@@ -4,7 +4,7 @@
 <head>
   <title>Andreas Bjärlestam</title>
     <meta charset="utf-8">
-    <meta name="keywords" content="bjarlestam code javascript ruby java python programmer developer bitbender" />
+    <meta name="keywords" content="bjarlestam code javascript java python programmer developer bitbender" />
     <meta name="description" content="Andreas Bjärlestam | bitbender" />
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
@@ -12,50 +12,10 @@
   <div id="main">
     <h1>Andreas Bjärlestam</h1>
     <div id="about">
-      <p>bitbender</p>
+      <h2>bitbender</h2>
       <a href="http://www.linkedin.com/in/bjarlestam">linkedin</a>
       <a href="http://www.twitter.com/bjarlestam">twitter</a>
     </div>
   </div>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-  <script type="text/javascript">
-
-    $(document).ready(function() {
-      
-      var bubbles = 40;
-      for(var i=1; i<bubbles+1; i++) {      
-        setTimeout(createBubble, i*100 + getRandom(0, 100));
-      }
-      
-      var topStart = 100;
-      
-      function createBubble() {
-        var bubble = $('<div class="bubble"></div>');
-        var size = getRandom(10, 100);
-        var top = topStart + getRandom(5, 20);
-        topStart = top;
-        var left = getRandom(400, 600);
-        var opacity = getRandom(0.1, 0.9);
-        var background = "rgba(255, 178, 36, " + opacity + ")"
-        
-        bubble.css({
-          top: top,
-          left: left,
-          width: size,
-          height: size,
-          'border-radius': size/2,
-          background: background
-          });
-        $('#main').append(bubble);
-        bubble.fadeIn('slow');
-      }
-      
-      function getRandom(min, max) {
-        return Math.random() * (max - min) + min;
-      }
-      
-    });
-    
-  </script>
 </body>
 </html>

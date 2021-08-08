@@ -1,18 +1,26 @@
 body {
-  color: #AAA;
-  font-family: "Arial";
+  color: #DDD;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
   font-size: 30px;
   }
 
-#main {
-    padding: 20px;
-    padding-bottom: 80px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#DDDDDD), to(#F3F3F3));
-    background: -moz-linear-gradient(top,  #DDDDDD,  #F3F3F3);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDDDDD', endColorstr='#F3F3F3');
+h1 {
+  font-weight: 100;
+}
 
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
+h2 {
+  margin-top: 0;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+#main {
+    padding: 50px;
+    padding-left: 100px;
+    padding-bottom: 200px;
+    background: rgb(121,159,154);
+    background: linear-gradient(135deg, rgba(121,159,154,1) 0%, rgba(83,142,177,1) 35%, rgba(199,181,193,1) 100%);
     border-radius: 8px;
     margin: 0 auto;
     width: 80%;
@@ -20,34 +28,20 @@ body {
     position: relative;
 }
 
-.bubble {
-  display: none;
-  border: 2px solid #FFCA80;
-  background: rgba(255, 178, 36, 0.9);
-  position: absolute;
-}
-
 #about {
-  background: #FFA01C;
   color: #fff;
+  font-weight: 200;
   padding: 40px;
   border-radius: 8px;
-  border: 2px solid #FFCA80;
+  border: 2px solid #FFF;
   opacity: 0.8;
   width: 400px;
-}
-
-#links {
-  background: #FFF;
-  z-index: 200;
-  top: -90px;
-  left: 120px;
 }
 
 #about a {
   margin-bottom: 15px;
   display: block;
-  color: #888;
+  color: #DDD;
 }
 
 #about a:hover {
