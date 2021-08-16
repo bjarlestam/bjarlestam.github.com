@@ -11,7 +11,7 @@ h1 {
 
 h2 {
   margin-top: 0;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 200;
 }
 
@@ -29,13 +29,14 @@ h2 {
 }
 
 #about {
+  font-size: 3rem;
   color: #fff;
   font-weight: 200;
   padding: 40px;
   border-radius: 8px;
   border: 2px solid #FFF;
   opacity: 0.8;
-  width: 400px;
+  width: 80%;
 }
 
 #about a {
@@ -57,5 +58,17 @@ h2 {
 
 #about a:hover:before {
   color: rgb(12, 205, 172)
+}
+
+@media only screen and (min-width: 1024px) {
+  #about {
+    width: 400px;
+    font-size: 2rem;
+  }
+
+
+  h2 {
+    font-size: 2rem;
+  }
 }
 
